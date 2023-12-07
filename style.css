@@ -11,21 +11,28 @@ a {
     text-decoration:none;
 }
 
+h2{
+    font-size:1.2em;
+    margin-top:-1.5vh;
+}
+
 p {
     color:gray;
+    margin-top:-20px;
+    font-size:0.8em;
 }
 
 header {
     font-size:1em;
     color: #444;
     text-align: left;
-    margin: 20px;
+    margin: 2vh;
 }
 
 
 /*navbar contents*/
 nav {
-    margin-left: 20px;
+    margin-left: 2vh;
     padding-left:10px;
     text-align: left; /* Center the content horizontally */
     padding: 10px 0;
@@ -95,6 +102,7 @@ nav a:focus {
 }
 
 /* Add styles for the popup container */
+
 .popup-container {
     display: none;
     position: fixed;
@@ -138,7 +146,7 @@ nav a:focus {
     text-align: center; /* Center the text within the container */
     color:#f6f6f6;
     margin:5vh;
-    padding: 10vh;
+    padding: 8vh;
     background-color:#57916e;
     border-radius:20px;
 }
@@ -147,20 +155,18 @@ nav a:focus {
     display: flex;
     justify-content: center; /* Center the button horizontally */
     align-items: center; /* Center the button vertically */
-    height: 100vh; /* Set the height to 100% of the viewport height */
 }
 
 button {
-    padding: 10px 20px; /* Add padding for better visual appearance */
+    margin-top:0px;
+    padding: 10px 20px; 
     border: 1px solid black;
 }
 
-.footer {
-    background-color: #333;
+.cpy {
+    font-size:0.8em;
     color: #fff;
-    text-align: center;
-    padding: 10px;
+    padding: 5vh 1vh 1vh 1vh;
     position: fixed;
     bottom: 0;
-    width: 100%;
 }
