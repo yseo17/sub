@@ -31,23 +31,16 @@ function closePopup() {
     document.getElementById('popupContainer').style.display = 'none';
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to open the random popup
+    window.selectRandomMenu = function () {
+        // Display the popup
+        document.getElementById('randomPopupContainer').style.display = 'block';
+    };
 
-// random menu selector
-
-// Function to select a random menu and display it
-function selectRandomMenu() {
-    const menuItems = document.querySelectorAll('.menu-item');
-    const randomIndex = Math.floor(Math.random() * menuItems.length);
-
-    // Get data attributes for the randomly selected menu item
-    const itemName = menuItems[randomIndex].getAttribute('data-title');
-    const itemImage = menuItems[randomIndex].getAttribute('data-image');
-    const itemDescription = menuItems[randomIndex].getAttribute('data-description');
-
-    // Display the randomly selected menu
-    document.getElementById('randomMenuDisplay').innerHTML = `
-        <h3>${itemName}</h3>
-        <img src="${itemImage}" alt="${itemName}">
-        <p>${itemDescription}</p>
-    `;
-}
+    // Function to close the random popup
+    window.closeRandomPopup = function () {
+        // Close the popup
+        document.getElementById('randomPopupContainer').style.display = 'none';
+    };
+});
