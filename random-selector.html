@@ -25,14 +25,23 @@
     </nav>
 
     <section class="random-selector">
-        <h2>Random Menu Selector</h2>
-        <button onclick="selectRandomMenu()">Select Random Menu</button>
+        <h2>오늘의 메뉴는?</h2>
+        <div class="center-content">
+            <button onclick="selectRandomMenu()">클릭!</button>
+        </div>
         <div id="randomMenuDisplay">
             <!-- Display the randomly selected menu here -->
         </div>
+
+        <div class="popup-container" id="randomPopupContainer">
+            <div class="popup-content">
+                <span class="close-button" onclick="closeRandomPopup()">x</span>
+                <h2 id="randomPopupTitle"></h2>
+            </div>
+        </div>
     </section>
 
-    <div class="footer">
+    <div class="cpy">
         <p>&copy; 2023 yoonseokim</p>
     </div>
 
