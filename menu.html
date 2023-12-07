@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>서브웨이 조합 백과</title>
+</head>
+<body>
+
+    <header>
+        <div class="banner">
+            <h1>서브웨이 조합 백과</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">메인 화면</a></li>
+            <li>/</li>
+            <li><a href="menu.html">메뉴 보기</a></li>
+            <li>/</li>
+            <li><a href="random-selector.html">오늘은 뭐 먹지?</a></li>
+        </ul>
+    </nav>
+
+    <!-- Add this div for the popup container -->
+    <div class="popup-container" id="popupContainer">
+        <div class="popup-content" id="popupContent">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2 id="popupTitle"></h2>
+            <img src="" alt="Menu Item Image" id="popupImage">
+            <p id="popupDescription"></p>
+            <!-- Add more details or customization options as needed -->
+        </div>
+    </div>
+
+    <section class="menu-list">
+        <div class="menu-item" data-title="에그마요" data-image="Egg_Mayo.png" data-description="조합 1 조합 2">
+            <img src="img/Egg_Mayo.png">
+            <h2>에그 마요</h2>
+            <p class="tags"></p>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/Italian_BMT.png">
+            <h2><a href="Italian_BMT.html">이탈리안 비엠티</a></h2>
+            <p class="tags">#인기</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/BLT.png">
+            <h2><a href="BLT.html">비엘티</a></h2>
+            <p class="tags"></p>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/Ham.png">
+            <h2><a href="Ham.html">햄</a></h2>
+            <p class="tags"></p>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/Tuna.png">
+            <h2><a href="Tuna.html">참치</a></h2>
+            <p class="tags"></p>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/Chicken_Slice.png">
+            <h2><a href="Chicken_Slice.html">치킨 슬라이스</a></h2>
+            <p class="tags"></p>
+        </div>
+
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2023 yoonseokim</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
