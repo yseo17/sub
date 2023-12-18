@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>서브웨이 조합 백과</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
     <section class="random-selector">
         <h2>오늘의 메뉴는?</h2>
         <div class="center-content">
-            <button onclick="selectRandomMenu()">클릭!</button>
+            <button id="randomMenuButton">클릭!</button>
         </div>
         <div id="randomMenuDisplay">
             <!-- Display the randomly selected menu here -->
