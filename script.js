@@ -26,21 +26,51 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Function to close the popup
-function closePopup() {
-    document.getElementById('popupContainer').style.display = 'none';
-}
+//random selector
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to open the random popup
-    window.selectRandomMenu = function () {
-        // Display the popup
-        document.getElementById('randomPopupContainer').style.display = 'block';
-    };
 
-    // Function to close the random popup
-    window.closeRandomPopup = function () {
-        // Close the popup
+    function closeRandomPopup() {
         document.getElementById('randomPopupContainer').style.display = 'none';
-    };
+    }
+
+    const randomMenuButton = document.getElementById('randomMenuButton');
+    const randomPopupContainer = document.getElementById('randomPopupContainer');
+    const randomPopupTitle = document.getElementById('randomPopupTitle');
+
+    if (randomMenuButton && randomPopupContainer && randomPopupTitle) {
+        randomMenuButton.addEventListener('click', function () {
+            const menuList = [
+                '에그 마요',
+                '이탈리안 비엠티',
+                '비엘티',
+                '햄',
+                '참치',
+                '치킨 슬라이스',
+                '치킨 데리야끼',
+                '쉬림프',
+                '핫 쉬림프',
+                '폴드 포크 바비큐',
+                '스테이크 & 치즈',
+                'K-바비큐',
+            ];
+
+            const randomIndex = Math.floor(Math.random() * menuList.length);
+            const randomMenuItem = menuList[randomIndex];
+
+            randomPopupTitle.innerHTML = "<span class='popup-text'; ></br>오늘의 메뉴는...</br></span><span style='color:#333;'></br>" + randomMenuItem + "</span>";
+
+            randomPopupContainer.style.display = 'block';
+        });
+
+        randomPopupContainer.addEventListener('click', function (event) {
+            if (event.target.id === 'randomPopupContainer' || event.target.id === 'closeRandomPopup') {
+                // Close the popup
+                closeRandomPopup();
+            }
+        });
+    }
+
+    // Close the popup when the 'x' button is clicked
+    document.getElementById('closeRandomPopup').addEventListener('click', closeRandomPopup);
 });
