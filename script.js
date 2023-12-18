@@ -1,6 +1,12 @@
 // menu pop-ups
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Function to close the menu popup
+    function closeMenuPopup() {
+        document.getElementById('popupContainer').style.display = 'none';
+    }
+
+    // Get the elements
     const menuItems = document.querySelectorAll('.menu-item');
     const popupContainer = document.getElementById('popupContainer');
     const popupContent = document.getElementById('popupContent');
@@ -8,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const popupImage = document.getElementById('popupImage');
     const popupDescription = document.getElementById('popupDescription');
 
+    // Attach click event to each menu item
     menuItems.forEach(item => {
         item.addEventListener('click', function () {
             // Get data attributes for the clicked menu item
@@ -24,7 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
             popupContainer.style.display = 'block';
         });
     });
+
+    // Close the popup when clicking outside the content area or the 'x' button
+    popupContainer.addEventListener('click', function (event) {
+        if (event.target.id === 'popupContainer' || event.target.id === 'closePopup') {
+            // Close the popup
+            closeMenuPopup();
+        }
+    });
 });
+
 
 //random selector
 
@@ -58,19 +74,21 @@ document.addEventListener('DOMContentLoaded', function () {
             const randomIndex = Math.floor(Math.random() * menuList.length);
             const randomMenuItem = menuList[randomIndex];
 
+            // Change the color and display the randomly selected menu in the popup with custom styles
             randomPopupTitle.innerHTML = "<span class='popup-text'; ></br>오늘의 메뉴는...</br></span><span style='color:#333;'></br>" + randomMenuItem + "</span>";
 
+            // Display the popup
             randomPopupContainer.style.display = 'block';
         });
 
+        // Close the popup when clicking outside the content area or the 'x' button
         randomPopupContainer.addEventListener('click', function (event) {
-            if (event.target.id === 'randomPopupContainer' || event.target.id === 'closeRandomPopup') {
+            if (event.target.id === 'randomPopupContainer' || event.target.classList.contains('close-random-popup')) {
                 // Close the popup
                 closeRandomPopup();
             }
         });
+        document.getElementById('closeRandomPopup').addEventListener('click', closeRandomPopup);
     }
 
-    // Close the popup when the 'x' button is clicked
-    document.getElementById('closeRandomPopup').addEventListener('click', closeRandomPopup);
 });
