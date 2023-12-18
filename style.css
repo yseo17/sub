@@ -148,7 +148,27 @@ nav a:focus {
     cursor: pointer;
 }
 
+.close-button{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+
 /* random menu selector */
+
+.popup-text {
+    color: #333; /* Set the color as needed */
+    font-size:0.7em;
+}
+
+#randomMenuItem{
+    color:#333;
+}
 
 .random-selector {
     text-align: center; /* Center the text within the container */
@@ -177,4 +197,10 @@ button {
     padding: 5vh 1vh 1vh 1vh;
     position: fixed;
     bottom: 0;
+}
+
+#randomPopupTitle {
+    font-size: 18px; /* Set the font size */
+    font-weight: bold; /* Set the font weight */
+    margin-bottom: 10px;
 }
