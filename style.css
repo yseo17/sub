@@ -16,10 +16,18 @@ h2{
     margin-top:-1.5vh;
 }
 
+h3 {
+    color:rgb(91, 158, 93);
+    margin-top:-17px;
+    font-size:0.8em;
+    font-weight:bold ;
+    font-style:italic;
+}
+
 p {
     color:gray;
-    margin-top:-20px;
     font-size:0.8em;
+    margin-top:-17px;
 }
 
 header {
@@ -32,24 +40,19 @@ header {
 
 /*navbar contents*/
 nav {
-    margin-left: 2vh;
-    padding-left:10px;
-    text-align: left; /* Center the content horizontally */
-    padding: 10px 0;
+    margin-left: 2vh; padding-left:10px; 
+    text-align: left; padding: 10px 0;
 }
 
 nav ul {
-    font-size:0.9em;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block; /* Align the list horizontally */
+    font-size:0.9em; list-style-type: none;
+    margin: 0; padding: 0;
+    display: inline-block;
 }
 
 nav li {
-    margin-left: 20px;
-    margin-right: 10px;
-    display: inline; /* Display list items inline */
+    margin-left: 20px; margin-right: 10px;
+    display: inline; 
 }
 
 nav li:hover{
@@ -65,7 +68,7 @@ nav a {
 nav a:hover,
 nav a:active,
 nav a:focus {
-    color: #57916e; /* Green color for hover, active, and focus states */
+    color: #57916e;
     padding-bottom: 2px;
 }
 
@@ -93,7 +96,7 @@ nav a:focus {
 /* Media query for mobile screens */
 @media screen and (max-width: 768px) {
     .menu-item {
-        flex-basis: calc(50% - 40px); /* 2 columns for mobile screen */
+        flex-basis: calc(50% - 20px); /* 2 columns for mobile screen */
     }
 
     header {
@@ -136,7 +139,7 @@ nav a:focus {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 30px;
+    font-size: 1em;
     cursor: pointer;
 }
 
